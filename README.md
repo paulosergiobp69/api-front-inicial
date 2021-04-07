@@ -34,6 +34,7 @@ https://www.youtube.com/watch?v=S-b-reTfJrU&list=PLWd_VnthxxLdISUq_V8CXUer07PmQ7
 https://www.youtube.com/watch?v=wwq94z8mssY&list=PLWd_VnthxxLeRdaga093nbR64dALpbPwI&index=1
 
 1. baixar e instalar: node, comander, vuejs 
+
 node ----> https://nodejs.org
 
 comander --> https://cmder.net/
