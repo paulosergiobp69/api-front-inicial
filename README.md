@@ -58,8 +58,8 @@ vuejs ---> https://cli.vuejs.org
 > npm run serve
 
 3.1. adicionar a extenção vue tools no browser
-3.2. adicionar a extenção [vetur - pe wui] no vscode 
 
+3.2. adicionar a extenção [vetur - pe wui] no vscode 
 
 4. copia plugin materialize
 
