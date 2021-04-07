@@ -42,10 +42,12 @@ vuejs ---> https://cli.vuejs.org
 
 
 1.1. instalando vuejs
+
 		npm install -g @vue/cli
 		
 		
 2. Criar projeto VUEJS
+
 	vue create api-front
 	
 3. acessar projeto
@@ -61,4 +63,6 @@ vuejs ---> https://cli.vuejs.org
 4. copia plugin materialize
 
 5. adicionar axios
-npm install axios --save 
+
+	npm install axios --save 
+	
