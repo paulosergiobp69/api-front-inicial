@@ -79,7 +79,7 @@
   </div>
 </template>
 <script>
-import Cabecalho from './service/h100'
+import Cabecalho from './services/h100'
 export default {
 
   data(){
