@@ -97,7 +97,12 @@ export default {
             H100_C007_Id:'',
             H100_Status:''
           },
-          h100s: []
+          h100s: [],
+          credentials:{
+            email:'paulosergiobp@gmail.com',
+            password: '280772',
+          },
+          token: ''          
       }
   },
   mounted(){
@@ -107,9 +112,34 @@ export default {
   methods:{
 
     listar(){
-      Cabecalho.listar().then(resposta => {
-          this.h100s = resposta.data
-      })
+      if(!this.token){
+          Cabecalho.login(this.credentials).then(resposta => {
+            if(resposta.data.token){
+              this.token = resposta.data.token
+              Cabecalho.listar(this.token).then(resposta => {
+                  this.h100s = resposta.data
+              })
+              .catch(error => {
+                  this.errors = error
+                  this.errored = true
+              })
+
+            }
+          })
+          .catch(error => {
+              this.errors = error.response.data.errors
+              this.errored = true
+          })
+      }else{
+              Cabecalho.listar(this.token).then(resposta => {
+                  this.h100s = resposta.data
+              })
+              .catch(error => {
+                  this.errors = error
+                  this.errored = true
+              })
+
+      }
     },
 
     salvar(){
@@ -134,7 +164,6 @@ export default {
             this.errored = false
             this.errors = []
             this.listar()
-          
           })
           .catch(error => {
             this.errors = error.response.data.errors
