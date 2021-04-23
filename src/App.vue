@@ -12,12 +12,14 @@
       <form @submit.prevent="salvar">
 
          <section v-if="errored">
-              <b>Por favor, corrija o(s) seguinte(s) erro(s):</b>
+              <p>Pedimos desculpas, não estamos conseguindo recuperar as informações no momento. Por favor, tente novamente mais tarde.</p>
+<!--              <b>Por favor, corrija o(s) seguinte(s) erro(s):</b>
               <ul>
                 <li v-for="(erro,index) of errors" :key="index">
                   Campo: <b>{{ erro }}</b> 
                 </li>
               </ul>       
+              -->
           </section>
 
           <label>Produto</label>
@@ -120,7 +122,8 @@ export default {
                   this.h100s = resposta.data
               })
               .catch(error => {
-                  this.errors = error
+                  //this.errors = error
+                  console.log(error)
                   this.errored = true
               })
 
